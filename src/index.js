@@ -31,8 +31,6 @@ async function fetchImages() {
     try {
        const result = await API.fetchImages();
        const { hits, totalHits } = result;
-        console.log(API.page);
-        console.log(API.per_page);
         if (hits.length === 0) {
             refs.loadBtn.setAttribute('hidden', true);
             Notiflix.Notify.failure(NOTIFICATION_FAILURE);
